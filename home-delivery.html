@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Food Delivery App HTML Template</title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .delivery-hero {
+            background: var(--bs-light);
+            overflow: hidden;
+            position: relative;
+            padding: 120px 0 80px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .search-bar {
+            background: #fff;
+            padding: 8px;
+            border-radius: 50px;
+            box-shadow: var(--bs-box-shadow-lg);
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            padding: 10px 15px;
+            background: transparent;
+        }
+
+        .search-bar button {
+            border-radius: 50px;
+            padding: 12px 30px;
+        }
+
+        .category-item {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .category-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: var(--bs-box-shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 2rem;
+            color: var(--bs-primary);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header App Style -->
+    <header class="fixed-top navbar-light bg-white border-bottom shadow-sm">
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="assets/images/logo.webp" alt="Stackly Logo" style="height:40px;">
+                    <span class="fs-4 fw-bold text-dark d-none d-sm-inline">Stackly<span
+                            class="text-primary">Delivery</span></span>
+                </a>
+
+                <div
+                    class="d-none d-md-flex align-items-center bg-light rounded-pill px-3 py-2 border shadow-sm mx-auto cursor-pointer">
+                    <i class="ph-fill ph-map-pin text-primary me-2 fs-5"></i>
+                    <span class="fw-semibold">123 Food Street, NY</span>
+                    <i class="ph-bold ph-caret-down ms-2 text-muted"></i>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <a href="login.html" class="btn btn-light fw-bold px-4 rounded-pill d-none d-sm-inline-block"><i
+                            class="ph-bold ph-user me-1"></i> Sign In</a>
+                    <button class="btn btn-primary rounded-pill px-4 position-relative">
+                        <i class="ph-bold ph-shopping-bag me-1"></i> Cart
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark border border-light">3</span>
+                    </button>
+                    <button class="navbar-toggler border-0 shadow-none px-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navMenu">
+                        <i class="ph-bold ph-list fs-2"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Nav Menu Collapse for Mobile Dropdown -->
+        <div class="collapse navbar-collapse bg-white shadow-sm position-absolute w-100" id="navMenu">
+            <div class="container py-3">
+                <ul class="navbar-nav mx-auto text-center gap-3 fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Classic Mode</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Full Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/dashboard.html">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Delivery App Hero -->
+    <section class="delivery-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <span
+                        class="badge bg-danger bg-opacity-10 text-danger rounded-pill px-3 py-2 mb-3 fw-bold tracking-wide"><i
+                            class="ph-bold ph-lightning"></i> #1 FASTEST DELIVERY</span>
+                    <h1 class="hero-title text-dark">Craving Something <span class="text-primary">Delicious?</span></h1>
+                    <p class="fs-5 text-muted mb-4 pe-lg-5">Find the best local restaurants, cloud kitchens, and fast
+                        food joints near you. Order instantly.</p>
+
+                    <div class="search-bar" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="ph-bold ph-magnifying-glass fs-4 text-muted ms-3"></i>
+                        <input type="text" placeholder="Search for food or restaurants...">
+                        <button class="btn btn-primary fw-bold">Search</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/images/app-mockup.webp" class="img-fluid rounded-4 shadow-lg" alt="App UI Mockup"
+                        style="max-height: 500px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Slider -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold mb-0">Browse Categories</h3>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-outline-secondary rounded-circle p-2 swiper-cat-prev"><i
+                            class="ph-bold ph-caret-left"></i></button>
+                    <button class="btn btn-outline-secondary rounded-circle p-2 swiper-cat-next"><i
+                            class="ph-bold ph-caret-right"></i></button>
+                </div>
+            </div>
+            <div class="swiper category-slider pb-4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide category-item">
+                        <div class="category-icon"><i class="ph-fill ph-hamburger"></i></div>
+                        <h6 class="fw-bold text-dark mb-0">Burger</h6>
+                    </div>
+                    <div class="swiper-slide category-item">
+                        <div class="category-icon"><i class="ph-fill ph-pizza"></i></div>
+                        <h6 class="fw-bold text-dark mb-0">Pizza</h6>
+                    </div>
+                    <div class="swiper-slide category-item">
+                        <div class="category-icon"><i class="ph-fill ph-bowl-food"></i></div>
+                        <h6 class="fw-bold text-dark mb-0">Asian</h6>
+                    </div>
+                    <div class="swiper-slide category-item">
+                        <div class="category-icon"><i class="ph-fill ph-coffee"></i></div>
+                        <h6 class="fw-bold text-dark mb-0">Coffee</h6>
+                    </div>
+                    <div class="swiper-slide category-item">
+                        <div class="category-icon"><i class="ph-fill ph-cookie"></i></div>
+                        <h6 class="fw-bold text-dark mb-0">Bakery</h6>
+                    </div>
+                    <div class="swiper-slide category-item">
+                        <div class="category-icon"><i class="ph-fill ph-martini"></i></div>
+                        <h6 class="fw-bold text-dark mb-0">Drinks</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features / Steps -->
+    <section class="section-padding mb-5">
+        <div class="container text-center">
+            <h2 class="display-6 fw-bold mb-5" data-aos="fade-up">How Stackly Works</h2>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4">
+                        <img src="assets/images/dish-1.webp" class="rounded-circle shadow-sm mb-4"
+                            style="width:120px; height:120px; object-fit:cover;">
+                        <h4 class="fw-bold">1. Choose Food</h4>
+                        <p class="text-muted">Browse menus from local favorites and discover new ones.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4">
+                        <img src="assets/images/app-mockup.webp" class="rounded-circle shadow-sm mb-4"
+                            style="width:120px; height:120px; object-fit:cover;">
+                        <h4 class="fw-bold">2. Track Order</h4>
+                        <p class="text-muted">Pay securely and track your delivery rider in real-time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4">
+                        <img src="assets/images/dish-3.webp" class="rounded-circle shadow-sm mb-4"
+                            style="width:120px; height:120px; object-fit:cover;">
+                        <h4 class="fw-bold">3. Enjoy Meal</h4>
+                        <p class="text-muted">Hot food delivered fast exactly when you expected it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Swiper('.category-slider', {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                loop: true,
+                navigation: {
+                    nextEl: '.swiper-cat-next',
+                    prevEl: '.swiper-cat-prev',
+                },
+                breakpoints: {
+                    576: { slidesPerView: 3 },
+                    768: { slidesPerView: 4 },
+                    1024: { slidesPerView: 6 }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+  integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly - Home 2</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .home2-hero {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .home2-hero .bg-image {
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/hero-bg.webp') center/cover no-repeat;
+      opacity: .25;
+      transform: scale(1.05);
+    }
+
+    .home2-hero .bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, .85) 0%, rgba(0, 0, 0, .55) 55%, rgba(0, 0, 0, .25) 100%);
+    }
+
+    .home2-chip {
+      border: 1px solid rgba(197, 160, 89, .35);
+      background: rgba(0, 0, 0, .25);
+      backdrop-filter: blur(8px);
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .08);
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(197, 160, 89, .35);
+    }
+
+    .signature-badge {
+      border: 1px solid rgba(197, 160, 89, .35);
+      background: rgba(0, 0, 0, .35);
+    }
+
+    .dish-card {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .dish-card img {
+      height: 210px;
+      object-fit: cover;
+    }
+
+
+    .swiper-controls .btn {
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .menu-card img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="tastyc-theme">
+
+  <!-- Preloader -->
+  <div id="preloader" class="bg-body">
+    <div class="spinner border-primary"></div>
+  </div>
+
+  <!-- Header (same structure as index.html) -->
+  <header class="fixed-top tastyline-header border-bottom border-light border-opacity-10 transition-all">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container border-bottom border-light border-opacity-10 pb-3 mt-2">
+        <a class="navbar-brand text-white fs-2 fw-bold" style="font-family: 'Cormorant Garamond', serif;"
+          href="index.html"><img src="assets/images/logo.webp" alt="Logo"
+            style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar">
+          <i class="ph ph-list text-primary fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav text-uppercase tracking-wide fs-7">
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle active text-white" href="javascript:void(0)"
+                data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu bg-dark border border-light border-opacity-10 shadow-sm mt-3">
+                <li><a class="dropdown-item text-white hover-primary" href="index.html">Home 1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="about2.html">About</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="menu2.html">Menu</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="blog2.html">Blog</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="contact2.html">Contact</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary pe-0"
+                href="admin/dashboard.html">Admin</a></li>
+          </ul>
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center gap-4">
+          <a href="signin.html"
+            class="text-white text-uppercase tracking-wide fs-7 fw-bold text-decoration-none hover-primary transition-all">
+            Sign In
+          </a>
+          <a href="reservation.html"
+            class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fs-7 fw-bold">
+            Find a Table
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-3">
+      <h5 class="offcanvas-title text-primary fw-bold"
+        style="font-family: 'Cormorant Garamond', serif; font-size: 2rem;"><img src="assets/images/logo.webp" alt="Logo"
+          style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);"></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul
+        class="navbar-nav justify-content-start flex-grow-1 ps-3 text-uppercase fs-6 tracking-wide mt-4 align-items-start text-start">
+        <li class="nav-item dropdown mb-3">
+          <a class="nav-link dropdown-toggle text-primary" href="javascript:void(0)" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu bg-dark border border-light border-opacity-10 shadow-sm mt-2">
+            <li><a class="dropdown-item text-white hover-primary" href="index.html">Home 1</a></li>
+          </ul>
+        </li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="about2.html">About</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="menu2.html">Menu</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="blog2.html">Blog</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="contact2.html">Contact</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="admin/dashboard.html">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HERO (Home2 layout) -->
+  <section class="home2-hero">
+    <div class="bg-image"></div>
+    <div class="bg-overlay"></div>
+
+    <div class="container position-relative z-3 pt-5">
+      <div class="row align-items-center g-5 pt-5">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill home2-chip mb-4">
+            <i class="ph-fill ph-flower-lotus text-primary"></i>
+            <span class="text-uppercase tracking-wide fs-7 text-light opacity-75">Seasonal Tasting • 2026</span>
+          </div>
+
+          <h1 class="display-2 fw-bold text-white lh-1 mb-4" style="font-family:'Cormorant Garamond', serif;">
+            A Modern Fine Dining<br />
+            <span class="text-primary">Chef’s Table</span> Experience
+          </h1>
+
+          <p class="text-light opacity-75 fs-5 mb-5 pe-lg-5 font-base">
+            Curated menus, organic ingredients, and an atmosphere designed for unforgettable evenings.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="reservation.html"
+              class="btn btn-primary text-dark rounded-0 px-5 py-3 text-uppercase fw-bold tracking-wide hover-white">
+              Book a Table
+            </a>
+            <a href="#menu-section"
+              class="btn btn-outline-primary rounded-0 px-5 py-3 text-uppercase tracking-wide fw-bold hover-bg">
+              Explore Menu
+            </a>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 mt-5">
+            <div class="signature-badge px-4 py-3">
+              <div class="d-flex align-items-center gap-3">
+                <i class="ph-fill ph-star text-primary fs-3"></i>
+                <div>
+                  <div class="text-white fw-bold">4.9 Rating</div>
+                  <div class="text-light opacity-50 fs-7 text-uppercase tracking-wide">Guest Reviews</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="signature-badge px-4 py-3">
+              <div class="d-flex align-items-center gap-3">
+                <i class="ph-fill ph-leaf text-primary fs-3"></i>
+                <div>
+                  <div class="text-white fw-bold">Organic Ingredients</div>
+                  <div class="text-light opacity-50 fs-7 text-uppercase tracking-wide">Farm to Table</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="signature-badge px-4 py-3">
+              <div class="d-flex align-items-center gap-3">
+                <i class="ph-fill ph-wine text-primary fs-3"></i>
+                <div>
+                  <div class="text-white fw-bold">Wine Pairing</div>
+                  <div class="text-light opacity-50 fs-7 text-uppercase tracking-wide">Sommelier Picks</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="200">
+          <div class="p-4 border border-light border-opacity-10" style="background: rgba(0,0,0,.35);">
+            <img src="assets/images/about.webp" class="img-fluid" alt="Dining Atmosphere"
+              style="border: 1px solid rgba(197, 160, 89, .35);" />
+            <div class="d-flex justify-content-between align-items-center mt-4">
+              <div class="text-start">
+                <div class="text-primary fw-bold text-uppercase tracking-wide fs-7">Open Today</div>
+                <div class="text-white fw-bold">10:00 AM – 12:00 AM</div>
+              </div>
+              <a href="contact.html" class="btn btn-outline-secondary rounded-0 px-4 py-2 text-uppercase fs-7">
+                Location
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section-padding bg-body">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-7" data-aos="fade-up">
+          <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Why Choose Us</span>
+          <h2 class="display-4 text-white fw-bold" style="font-family:'Cormorant Garamond', serif;">
+            Crafted With Passion
+          </h2>
+        </div>
+        <div class="col-lg-5 text-lg-end" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-light opacity-50 font-base">
+            Every dish is designed like a masterpiece — flavors, plating, and aroma in perfect balance.
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+          <div class="feature-card p-4 h-100">
+            <i class="ph-fill ph-chef-hat text-primary fs-1"></i>
+            <h5 class="text-white mt-3 fw-bold">Master Chefs</h5>
+            <p class="text-light opacity-50 font-base mb-0">Signature techniques and world-class creativity.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card p-4 h-100">
+            <i class="ph-fill ph-leaf text-primary fs-1"></i>
+            <h5 class="text-white mt-3 fw-bold">Organic Only</h5>
+            <p class="text-light opacity-50 font-base mb-0">Fresh ingredients from trusted local farms.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+          <div class="feature-card p-4 h-100">
+            <i class="ph-fill ph-music-notes text-primary fs-1"></i>
+            <h5 class="text-white mt-3 fw-bold">Elegant Ambience</h5>
+            <p class="text-light opacity-50 font-base mb-0">A calm, premium atmosphere for special nights.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card p-4 h-100">
+            <i class="ph-fill ph-wine text-primary fs-1"></i>
+            <h5 class="text-white mt-3 fw-bold">Wine Pairing</h5>
+            <p class="text-light opacity-50 font-base mb-0">Sommelier picks that elevate every course.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DISHES (Swiper) -->
+  <section class="section-padding bg-light" id="menu-section">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div data-aos="fade-up">
+          <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Chef Specials</span>
+          <h2 class="display-5 text-white fw-bold text-uppercase tracking-wide mb-0">Signature Dishes</h2>
+        </div>
+
+        <div class="swiper-controls d-flex gap-2" data-aos="fade-up" data-aos-delay="100">
+          <button class="btn btn-outline-secondary rounded-circle dish-prev">
+            <i class="ph-bold ph-caret-left"></i>
+          </button>
+          <button class="btn btn-outline-secondary rounded-circle dish-next">
+            <i class="ph-bold ph-caret-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="swiper dish-slider pb-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/beef_tartare.webp" class="w-100" alt="Beef Tartare">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Beef Tartare</h5>
+                  <span class="text-primary fw-bold">$18</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Truffle oil, egg yolk, capers</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/oysters_rockefeller.webp" class="w-100" alt="Oysters Rockefeller">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Oysters Rockefeller</h5>
+                  <span class="text-primary fw-bold">$24</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Spinach, pernod, hollandaise</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/truffle_risotto.webp" class="w-100" alt="Truffle Risotto">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Truffle Risotto</h5>
+                  <span class="text-primary fw-bold">$38</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Wild mushrooms, parmesan, arborio rice</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/wagyu_ribeye.webp" class="w-100" alt="Wagyu Ribeye">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Wagyu Ribeye</h5>
+                  <span class="text-primary fw-bold">$125</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Bordelaise sauce, asparagus</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/pan_seared_scallops.webp" class="w-100" alt="Pan-Seared Scallops">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Pan-Seared Scallops</h5>
+                  <span class="text-primary fw-bold">$42</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Cauliflower puree, pancetta</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/lobster_bisque.webp" class="w-100" alt="Lobster Bisque">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Lobster Bisque</h5>
+                  <span class="text-primary fw-bold">$16</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Cognac, cream, chives</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/classic_tiramisu.webp" class="w-100" alt="Classic Tiramisu">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Classic Tiramisu</h5>
+                  <span class="text-primary fw-bold">$14</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Espresso, mascarpone, cocoa</p>
+                <a href="#full-menu-section"
+                  class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  View on Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="dish-card h-100" style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <img src="assets/images/about.webp" class="w-100" alt="Dish 4">
+              <div class="p-4">
+                <div class="d-flex justify-content-between align-items-start">
+                  <h5 class="text-white fw-bold mb-1">Chef’s Tasting</h5>
+                  <span class="text-primary fw-bold">$95</span>
+                </div>
+                <p class="text-light opacity-50 font-base mb-3">Multi-course seasonal experience</p>
+                <a href="reservation.html"
+                  class="btn btn-primary text-dark rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                  Reserve Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4" data-aos="fade-up">
+        <a href="#full-menu-section"
+          class="btn btn-outline-primary rounded-0 px-5 py-3 text-uppercase fw-bold tracking-wide">
+          View Full Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section-padding bg-body py-5" id="full-menu-section">
+    <div class="container py-5">
+
+      <!-- Controls -->
+      <div class="row g-4 align-items-center mb-4">
+        <div class="col-lg-7" data-aos="fade-up">
+          <ul class="nav nav-pills gap-2" id="menuTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="starters-tab" data-bs-toggle="tab" data-bs-target="#starters"
+                type="button" role="tab">Starters</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="mains-tab" data-bs-toggle="tab" data-bs-target="#mains" type="button"
+                role="tab">Main Courses</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="desserts-tab" data-bs-toggle="tab" data-bs-target="#desserts" type="button"
+                role="tab">Desserts</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="drinks-tab" data-bs-toggle="tab" data-bs-target="#drinks" type="button"
+                role="tab">Drinks</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="input-group">
+            <span class="input-group-text bg-transparent border border-secondary text-primary">
+              <i class="ph-bold ph-magnifying-glass"></i>
+            </span>
+            <input id="menuSearch" type="text" class="form-control search-input" placeholder="Search dishes...">
+          </div>
+          <div class="text-light opacity-50 font-base mt-2" style="font-size:.9rem;">
+            Tip: type “wagyu”, “wine”, “tiramisu”…
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabs Content -->
+      <div class="tab-content" id="menuTabsContent">
+
+        <!-- Starters -->
+        <div class="tab-pane fade show active" id="starters" role="tabpanel" aria-labelledby="starters-tab">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Beef Tartare truffle egg yolk capers"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/beef_tartare.webp" alt="Beef Tartare">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Beef Tartare</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$18</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Signature Starter
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Truffle oil, egg yolk, capers — hand-cut and perfectly seasoned.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Oysters Rockefeller spinach pernod hollandaise"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="50" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/oysters_rockefeller.webp" alt="Oysters Rockefeller">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Oysters
+                        Rockefeller</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$24</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Chef Pick
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Spinach, pernod, hollandaise — rich, savory, and elegant.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Lobster Bisque cognac cream chives"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="100" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/lobster_bisque.webp" alt="Lobster Bisque">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Lobster
+                        Bisque</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$16</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Comfort Classic
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Cognac, cream, chives — silky texture and deep seafood aroma.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Caviar Blini creme fraiche chives"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="150" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/caviar_blini.webp" alt="Caviar Blini">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Caviar
+                        Blini</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$28</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Luxury Bite
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Crème fraîche, chives — exquisite taste and presentation.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="tab-pane fade" id="mains" role="tabpanel" aria-labelledby="mains-tab">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Wagyu Ribeye bordelaise asparagus steak"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/wagyu_ribeye.webp" alt="Wagyu Ribeye">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Wagyu Ribeye</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$125</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Premium Cut
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Bordelaise sauce, asparagus — perfect sear, rested and sliced.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Pan-Seared Scallops cauliflower puree pancetta"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="50" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/pan_seared_scallops.webp" alt="Scallops">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Pan-Seared
+                        Scallops</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$42</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Coastal Favorite
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Cauliflower puree, pancetta — golden crust with tender center.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Truffle Risotto arborio wild mushrooms parmesan"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="100" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/truffle_risotto.webp" alt="Truffle Risotto">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Truffle
+                        Risotto</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$38</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Vegetarian
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Arborio rice, wild mushrooms, parmesan — creamy and aromatic.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Grilled Sea Bass herb butter charred lemon"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="150" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/grilled_sea_bass.webp" alt="Grilled Sea Bass">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Grilled
+                        Sea Bass</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$46</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Fresh Catch
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Herb butter, charred lemon — tender and flavorful.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Classic Tiramisu espresso mascarpone cocoa"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/classic_tiramisu.webp" alt="Tiramisu">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Classic
+                        Tiramisu</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$14</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> House Dessert
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Espresso, mascarpone, cocoa — balanced sweetness and cream.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Chocolate Fondant molten chocolate vanilla"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="50" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/chocolate_fondant.webp" alt="Chocolate Fondant">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Chocolate
+                        Fondant</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$16</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Best Seller
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Molten center, vanilla cream — warm, rich, and indulgent.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Lemon Tart meringue sweet crust"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="100" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/lemon_tart.webp" alt="Lemon Tart">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Lemon
+                        Tart</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$14</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Refreshing
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Meringue peaks, crisp crust — sweet and tangy delight.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="tab-pane fade" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Old Fashioned bourbon bitters orange peel"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/old_fashioned.webp" alt="Old Fashioned">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Old
+                        Fashioned</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$18</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Classic Cocktail
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Bourbon, bitters, orange peel — smooth and aromatic.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Sparkling Water lemon chilled"
+              style="cursor: pointer;" onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="50" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/sparkling_water.webp" alt="Sparkling Water">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Sparkling
+                        Water</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$6</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Refreshing
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Served chilled with lemon — crisp and clean.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 menu-item-card" data-title="Mojito mint lime rum" style="cursor: pointer;"
+              onclick="window.location.href='404.html';">
+              <div class="menu-card" data-aos="fade-up" data-aos-delay="100" style="cursor: pointer;"
+                onclick="window.location.href='404.html';">
+                <img src="assets/images/mojito.webp" alt="Mojito">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="text-white fw-bold mb-1 font-heading">
+                      <a href="404.html" class="text-white text-decoration-none hover-primary">Mojito</a>
+                    </h5>
+                    <span class="text-primary fw-bold fs-5 font-heading">$12</span>
+                  </div>
+                  <div class="text-primary menu-meta font-base mb-2">
+                    <i class="ph-bold ph-tag me-1"></i> Signature Cocktail
+                  </div>
+                  <p class="text-light opacity-50 font-base mb-4">
+                    Mint, lime, rum — perfectly muddled and refreshing.
+                  </p>
+                  <div class="mt-auto d-flex gap-2">
+                    <a href="404.html" class="btn btn-outline-primary rounded-0 w-100 text-uppercase fs-7 fw-bold">
+                      Details
+                    </a>
+                    <button class="btn btn-primary text-dark rounded-0 px-3">
+                      <i class="ph-bold ph-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="py-5 bg-image position-relative"
+    style="background: url('assets/images/dish-2.webp') center/cover fixed;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(10, 11, 10, 0.85);"></div>
+    <div class="container position-relative z-2 py-5 text-center" data-aos="fade-up">
+      <h2 class="text-primary font-heading fst-italic fs-2 mb-3">Tonight’s Spotlight</h2>
+      <h3 class="display-3 text-white fw-bold text-uppercase tracking-wide mb-4">Reserve Your Experience</h3>
+      <p class="text-white opacity-75 fs-5 mx-auto mb-5" style="max-width: 650px;">
+        Celebrate birthdays, anniversaries, and all your special moments with a premium menu and warm hospitality.
+      </p>
+      <a href="reservation.html"
+        class="btn btn-primary text-dark rounded-0 px-5 py-3 text-uppercase fw-bold tracking-wide hover-white">
+        Book Now
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index.html) -->
+  <!-- Footer -->
+  <footer class="bg-body border-top border-secondary pt-5 pb-4">
+    <div class="container pt-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+          <h2 class="text-white fw-bold mb-4" style="font-family: 'Cormorant Garamond', serif;"><a href="index.html"
+              style="text-decoration: none;"><img src="assets/images/logo.webp" alt="Logo"
+                style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);"></a></h2>
+          <p class="text-light opacity-50 pe-lg-4 font-base mb-4">Experience the pinnacle of fine dining. Elegant
+            atmosphere,
+            organic ingredients, and master chefs.</p>
+          <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-facebook-logo"></i></a>
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-instagram-logo"></i></a>
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-twitter-logo"></i></a>
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+          <h4 class="text-white font-heading mb-4 fst-italic" style="font-family: 'Cormorant Garamond', serif;">Quick
+            Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Home</a></li>
+            <li class="mb-2"><a href="about.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">About Us</a></li>
+            <li class="mb-2"><a href="menu.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Our Menu</a></li>
+            <li class="mb-2"><a href="blog.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Latest Blog</a></li>
+            <li class="mb-2"><a href="contact.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+          <h4 class="text-white font-heading mb-4 fst-italic" style="font-family: 'Cormorant Garamond', serif;">Services
+          </h4>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-light opacity-50">Fine Dining</li>
+            <li class="mb-2 text-light opacity-50">Private Events</li>
+            <li class="mb-2 text-light opacity-50">Catering</li>
+            <li class="mb-2 text-light opacity-50">Wine Tasting</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-end">
+          <h4 class="text-white font-heading mb-4 fst-italic" style="font-family: 'Cormorant Garamond', serif;">Contact
+          </h4>
+          <p class="text-light opacity-50 font-base mb-1">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+          <p class="text-primary fw-bold font-base fs-5 my-3">+1 (555) 123-4567</p>
+          <p class="text-light opacity-50 font-base mb-0">hello@stackly.com</p>
+        </div>
+      </div>
+
+      <div
+        class="border-top border-secondary border-opacity-50 mt-5 pt-4 text-center text-light opacity-50 font-base fs-7 text-uppercase tracking-wide">
+        <p>&copy; 2026 Stackly Restaurant. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // $(document).on('ready', function () {
+    // initialization of aos
+    AOS.init({
+      duration: 650,
+      once: false,
+      mirror: true,
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.AOS) AOS.init({ once: true, duration: 900 });
+
+      // Signature dish slider
+      new Swiper(".dish-slider", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+          nextEl: ".dish-next",
+          prevEl: ".dish-prev",
+        },
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          992: { slidesPerView: 3 }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

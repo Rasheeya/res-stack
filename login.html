@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly - Login & Register</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .auth-wrapper {
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .auth-form-container {
+            width: 100%;
+            max-width: 550px;
+            padding: 3rem;
+            margin: auto;
+        }
+
+        .auth-bg {
+            flex: 1;
+            background: linear-gradient(rgba(29, 53, 87, 0.4), rgba(29, 53, 87, 0.8)), url('assets/images/hero-bg.webp') center/cover;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <div class="auth-wrapper flex-column flex-lg-row">
+        <!-- Form Side -->
+        <div class="d-flex align-items-center bg-white shadow-sm" style="flex: 1;">
+            <div class="auth-form-container text-center">
+                <a href="index.html" class="d-inline-block mb-4">
+                    <img src="assets/images/logo.webp" alt="Stackly" height="50">
+                </a>
+                <h2 class="fw-bold mb-2">Welcome Back</h2>
+                <p class="text-muted mb-4 pb-2">Please enter your credentials to safely login.</p>
+
+                <form class="text-start" action="index.html">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-0"><i
+                                    class="ph-bold ph-envelope text-muted"></i></span>
+                            <input type="email" class="form-control bg-light border-0 py-3 shadow-none"
+                                placeholder="Enter your email" required autofocus>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <label class="form-label fw-bold mb-0">Password</label>
+                            <a href="404.html" class="small text-decoration-none fw-semibold">Forgot Password?</a>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-0"><i
+                                    class="ph-bold ph-lock-key text-muted"></i></span>
+                            <input type="password" class="form-control bg-light border-0 py-3 shadow-none"
+                                placeholder="Enter your password" required>
+                        </div>
+                    </div>
+
+                    <div class="form-check mb-4">
+                        <input class="form-check-input shadow-none cursor-pointer" type="checkbox" id="rememberMe">
+                        <label class="form-check-label text-muted cursor-pointer" for="rememberMe">Remember me</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 py-3 fw-bold rounded-pill mb-3 shadow">Sign
+                        In</button>
+
+                    <button type="button"
+                        class="btn btn-outline-dark w-100 py-3 fw-bold rounded-pill d-flex align-items-center justify-content-center gap-2">
+                        <i class="ph-fill ph-google-logo fs-5"></i> Continue with Google
+                    </button>
+
+                    <p class="text-center mt-5 mb-0 text-muted">
+                        Don't have an account? <a href="javascript:void(0)"
+                            class="text-primary fw-bold text-decoration-none">Create
+                            Account</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="auth-bg d-none d-lg-block position-relative">
+            <div class="position-absolute bottom-0 start-0 p-5 w-100 text-white pb-5">
+                <h2 class="display-5 fw-bold mb-4 w-75">Start Your Stackly Journey Today!</h2>
+                <p class="fs-5 opacity-75 w-75">Access hundreds of premium menus, book reservations instantly, and stay
+                    updated with your favorite localized chefs.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

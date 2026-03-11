@@ -1,0 +1,23 @@
+// Stackly Theme SCSS Variables - Tastyc Clone
+
+$primary: #c5a059;
+$secondary: #1a1a1a;
+$dark: #0a0b0a;
+$light: #1a1b1a;
+$body-bg: #0a0b0a;
+$body-color: #999999;
+$heading-color: #ffffff;
+
+// Fonts
+$font-family-base: 'Jost', sans-serif;
+$font-family-heading: 'Cormorant Garamond', serif;
+
+// Box Shadows
+$box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+$box-shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.3);
+$box-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.8);
+
+// Border Radius (Tastyc uses sharp edges)
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-xl: 0;

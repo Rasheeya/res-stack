@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Admin - Tastyc Dark Theme</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: #0a0b0a !important;
+            color: #999999 !important;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: #1a1b1a;
+            border-right: 1px solid rgba(197, 160, 89, 0.2);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        .sidebar-brand {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .sidebar-brand span {
+            color: #c5a059;
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+            padding: 2rem 0;
+            overflow-y: auto;
+        }
+
+        .nav-link {
+            color: #999999;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 2rem;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #c5a059;
+            background-color: rgba(197, 160, 89, 0.05);
+            border-left-color: #c5a059;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #0a0b0a;
+        }
+
+        .top-header {
+            background: #1a1b1a;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .stat-card {
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 0;
+            background: #1a1b1a;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: #c5a059;
+        }
+
+        /* Forms */
+        .form-control,
+        .form-select {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(197, 160, 89, 0.2) !important;
+            color: #ffffff !important;
+            border-radius: 0 !important;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            box-shadow: none;
+            border-color: #c5a059 !important;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #c5a059;
+            border-color: #c5a059;
+            color: #0a0b0a;
+            border-radius: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffffff;
+            border-color: #ffffff;
+            color: #0a0b0a;
+        }
+
+        .text-primary {
+            color: #c5a059 !important;
+        }
+
+        .bg-primary {
+            background-color: #c5a059 !important;
+        }
+
+        .border-bottom {
+            border-bottom-color: rgba(197, 160, 89, 0.2) !important;
+        }
+
+        /* Table custom styling */
+        .table {
+            color: #999999;
+            border-color: rgba(197, 160, 89, 0.2) !important;
+        }
+
+        .table thead th {
+            color: #ffffff;
+            font-family: 'Jost', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3) !important;
+        }
+
+        .table tbody tr {
+            transition: background 0.3s;
+        }
+
+        .table tbody tr:hover {
+            background-color: rgba(197, 160, 89, 0.05);
+        }
+    </style>
+</head>
+
+<body class="tastyc-theme">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <a href="../index.html" class="sidebar-brand text-decoration-none d-flex align-items-center gap-2"><img
+                src="../assets/images/logo.webp" alt="Logo"
+                style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);">
+        </a>
+        <nav class="sidebar-nav">
+            <ul class="nav flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active text-decoration-none">
+                        <i class="ph-fill ph-chart-pie-slice fs-5"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/404.html" onclick="window.location.href='404.html'"
+                        class="nav-link text-decoration-none">
+                        <i class="ph-fill ph-receipt fs-5"></i> Orders
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/404.html" onclick="window.location.href='404.html'"
+                        class="nav-link text-decoration-none">
+                        <i class="ph-fill ph-pizza fs-5"></i> Menu Items
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/404.html" onclick="window.location.href='404.html'"
+                        class="nav-link text-decoration-none">
+                        <i class="ph-fill ph-users fs-5"></i> Guests
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/404.html" onclick="window.location.href='404.html'"
+                        class="nav-link text-decoration-none">
+                        <i class="ph-fill ph-calendar-check fs-5"></i> Reservations
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="p-4" style="border-top: 1px solid rgba(197, 160, 89, 0.2);">
+            <a href="../index.html"
+                class="btn btn-outline-secondary rounded-0 text-white w-100 d-flex align-items-center justify-content-center gap-2 tracking-wide text-uppercase fs-7">
+                <i class="ph-bold ph-sign-out"></i> Return Site
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="d-flex align-items-center gap-3 w-50">
+                <div class="input-group d-none d-md-flex" style="max-width: 300px;">
+                    <span class="input-group-text px-3 bg-transparent border-end-0 border"
+                        style="border-color: rgba(197, 160, 89, 0.2) !important;"><i
+                            class="ph-bold ph-magnifying-glass text-muted"></i></span>
+                    <input type="text" class="form-control border-start-0" placeholder="Search...">
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <div class="position-relative cursor-pointer">
+                    <i class="ph-bold ph-bell fs-4 text-white"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle p-1 bg-primary rounded-circle"></span>
+                </div>
+                <div class="d-flex align-items-center gap-3 border-start ps-4 cursor-pointer"
+                    style="border-color: rgba(197, 160, 89, 0.2) !important;">
+                    <img src="../assets/images/chef-1.webp" alt="Admin" class="rounded-circle border border-primary"
+                        style="width: 40px; height: 40px; object-fit: cover;">
+                    <div class="d-none d-sm-block lh-sm">
+                        <span class="d-block text-white"
+                            style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;">Sous Chef</span>
+                        <small class="text-primary tracking-wide text-uppercase"
+                            style="font-size: 0.7rem;">Admin</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="p-4 p-md-5 flex-grow-1">
+            <div class="d-flex justify-content-between align-items-end mb-5 border-bottom pb-4">
+                <div>
+                    <h2 class="mb-2 text-white" style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem;">
+                        Cuisine Overview</h2>
+                    <p class="text-muted m-0 fs-5">Welcome back to the kitchen, Chef. Here are your daily metrics.</p>
+                </div>
+                <button class="btn btn-primary d-none d-md-flex align-items-center gap-2"><i
+                        class="ph-bold ph-download-simple"></i> Download Report</button>
+            </div>
+
+            <!-- Stats -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-xl-3">
+                    <div class="card stat-card p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="p-3 bg-dark border border-secondary text-primary lh-1"><i
+                                    class="ph-fill ph-currency-dollar fs-3"></i></div>
+                            <span class="text-success tracking-wide fw-bold"><i class="ph-bold ph-trend-up"></i>
+                                +14%</span>
+                        </div>
+                        <h5 class="text-white fw-normal font-heading fs-4 mb-1"
+                            style="font-family: 'Cormorant Garamond', serif;">Today's Revenue</h5>
+                        <h2 class="fw-bold m-0 text-primary fs-3">$14,250.00</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card stat-card p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="p-3 bg-dark border border-secondary text-primary lh-1"><i
+                                    class="ph-fill ph-receipt fs-3"></i></div>
+                            <span class="text-success tracking-wide fw-bold"><i class="ph-bold ph-trend-up"></i>
+                                +5%</span>
+                        </div>
+                        <h5 class="text-white fw-normal font-heading fs-4 mb-1"
+                            style="font-family: 'Cormorant Garamond', serif;">Total Orders</h5>
+                        <h2 class="fw-bold m-0 text-primary fs-3">128</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card stat-card p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="p-3 bg-dark border border-secondary text-primary lh-1"><i
+                                    class="ph-fill ph-users fs-3"></i></div>
+                            <span class="text-danger tracking-wide fw-bold"><i class="ph-bold ph-trend-down"></i>
+                                -2%</span>
+                        </div>
+                        <h5 class="text-white fw-normal font-heading fs-4 mb-1"
+                            style="font-family: 'Cormorant Garamond', serif;">Total Guests</h5>
+                        <h2 class="fw-bold m-0 text-primary fs-3">215</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card stat-card p-4 bg-primary text-dark" style="border: 1px solid #c5a059;">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <div class="p-3 bg-dark text-primary lh-1"><i class="ph-fill ph-calendar-check fs-3"></i>
+                            </div>
+                        </div>
+                        <h5 class="text-dark fw-bold font-heading fs-4 mb-1"
+                            style="font-family: 'Cormorant Garamond', serif;">New Reservations</h5>
+                        <h2 class="fw-bold m-0 text-dark fs-3">48 Pending</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <!-- Recent Orders Table -->
+                <div class="col-xl-8">
+                    <div class="card stat-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+                            <h4 class="text-white m-0"
+                                style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">Recent Kitchen
+                                Orders</h4>
+                            <a href="javascript:void(0)" onclick="window.location.href='404.html'"
+                                class="text-decoration-none text-primary fs-7 text-uppercase tracking-wide fw-bold">View
+                                All</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-borderless align-middle mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="pb-3 text-white">Order ID</th>
+                                        <th class="pb-3 text-white">Guest</th>
+                                        <th class="pb-3 text-white">Course Items</th>
+                                        <th class="pb-3 text-white">Total</th>
+                                        <th class="pb-3 text-white">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td class="py-3 fw-bold text-white">#ORD-501</td>
+                                        <td class="py-3">Michael Scott</td>
+                                        <td class="py-3 text-muted">2x Wagyu Ribeye...</td>
+                                        <td class="py-3 fw-bold text-primary">$250.00</td>
+                                        <td class="py-3"><span
+                                                class="badge bg-warning text-dark px-3 py-2 rounded-0 fs-7 tracking-wide">PREPARING</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="py-3 fw-bold text-white">#ORD-500</td>
+                                        <td class="py-3">Pam Beesly</td>
+                                        <td class="py-3 text-muted">1x Lobster Bisque...</td>
+                                        <td class="py-3 fw-bold text-primary">$120.50</td>
+                                        <td class="py-3"><span
+                                                class="badge bg-success text-white px-3 py-2 rounded-0 fs-7 tracking-wide">SERVED</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 fw-bold text-white">#ORD-499</td>
+                                        <td class="py-3">Jim Halpert</td>
+                                        <td class="py-3 text-muted">Truffle Risotto</td>
+                                        <td class="py-3 fw-bold text-primary">$85.00</td>
+                                        <td class="py-3"><span
+                                                class="badge bg-success text-white px-3 py-2 rounded-0 fs-7 tracking-wide">SERVED</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Area -->
+                <div class="col-xl-4">
+                    <div class="card stat-card p-4 h-100">
+                        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                            <h4 class="text-white m-0"
+                                style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">Revenue Analytics
+                            </h4>
+                            <select
+                                class="form-select border-0 text-primary w-auto shadow-none fw-bold px-3 py-1 fs-7 text-uppercase tracking-wide">
+                                <option>This Week</option>
+                                <option>Last Week</option>
+                            </select>
+                        </div>
+                        <div class="h-100 w-100" style="min-height: 250px; position: relative;">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer admin -->
+            <div class="text-start text-muted mt-5 font-base text-uppercase tracking-wide fs-7 pt-4 border-top">&copy;
+                2026 Tastyc Theme Clone - Admin Panel.</div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('revenueChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Revenue ($)',
+                            data: [1200, 1900, 1500, 2200, 2800, 3500, 3100],
+                            borderColor: '#c5a059',
+                            backgroundColor: 'rgba(197, 160, 89, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.0, // Sharp jagged edges to match square components
+                            fill: true,
+                            pointBackgroundColor: '#c5a059',
+                            pointBorderColor: '#0a0b0a',
+                            pointRadius: 4,
+                            pointHoverRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        layout: { padding: { top: 10 } },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                border: { display: false },
+                                grid: { color: 'rgba(255,255,255,0.05)' },
+                                ticks: { color: '#999999' }
+                            },
+                            x: {
+                                border: { display: false },
+                                grid: { display: false },
+                                ticks: { font: { weight: '600' }, color: '#999999' }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                backgroundColor: '#1a1b1a',
+                                titleColor: '#ffffff',
+                                bodyColor: '#c5a059',
+                                borderColor: 'rgba(197, 160, 89, 0.2)',
+                                borderWidth: 1,
+                                padding: 12,
+                                titleFont: { size: 14, family: "'Jost', sans-serif" },
+                                bodyFont: { size: 14, weight: 'bold', family: "'Jost', sans-serif" },
+                                displayColors: false,
+                                cornerRadius: 0
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

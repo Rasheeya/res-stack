@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+  integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+  integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackly - Blog 2</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .page-hero {
+      padding: 170px 0 90px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(10, 11, 10, .82), rgba(10, 11, 10, .92)),
+        url('assets/images/hero-bg.webp') center/cover no-repeat;
+      text-align: center;
+      color: #fff;
+    }
+
+    .panel {
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .post-card {
+      background: rgba(255, 255, 255, .02);
+      border: 1px solid rgba(255, 255, 255, .08);
+      transition: transform .25s ease, border-color .25s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .post-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(197, 160, 89, .35);
+    }
+
+    .post-thumb {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .featured-wrap {
+      overflow: hidden;
+      border: 1px solid rgba(197, 160, 89, .25);
+      background: rgba(0, 0, 0, .35);
+    }
+
+    .featured-img {
+      height: 360px;
+      object-fit: cover;
+      width: 100%;
+      opacity: .95;
+    }
+
+    .meta {
+      font-size: .85rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .tag-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      padding: 8px 12px;
+      margin: 6px 6px 0 0;
+      text-decoration: none;
+      color: rgba(255, 255, 255, .75);
+      transition: border-color .2s ease, color .2s ease;
+    }
+
+    .tag-pill:hover {
+      border-color: rgba(197, 160, 89, .35);
+      color: var(--bs-primary);
+    }
+
+    .search-input {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .10);
+      color: #fff;
+    }
+
+    .search-input:focus {
+      background: rgba(255, 255, 255, .06);
+      border-color: rgba(197, 160, 89, .35);
+      box-shadow: none;
+      color: #fff;
+    }
+
+    .list-link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, .75);
+    }
+
+    .list-link:hover {
+      color: var(--bs-primary);
+    }
+  </style>
+</head>
+
+<body class="tastyc-theme bg-body">
+
+  <!-- Header -->
+  <header class="fixed-top tastyline-header border-bottom border-light border-opacity-10 bg-body transition-all">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container pb-3 mt-2">
+        <a class="navbar-brand text-white fs-2 fw-bold" style="font-family: 'Cormorant Garamond', serif;"
+          href="index.html"><img src="assets/images/logo.webp" alt="Logo"
+            style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar">
+          <i class="ph ph-list text-primary fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav text-uppercase tracking-wide fs-7">
+            <li class="nav-item dropdown px-3">
+              <a class="nav-link dropdown-toggle text-white hover-primary" href="javascript:void(0)"
+                data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu bg-dark border border-light border-opacity-10 shadow-sm mt-3">
+                <li><a class="dropdown-item text-white hover-primary" href="home2.html">Home 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="about2.html">About</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="menu2.html">Menu</a></li>
+            <li class="nav-item px-3"><a class="nav-link active text-white" href="blog2.html">Blog</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary" href="contact2.html">Contact</a></li>
+            <li class="nav-item px-3"><a class="nav-link text-white hover-primary pe-0"
+                href="admin/dashboard.html">Admin</a></li>
+          </ul>
+        </div>
+
+        <div class="d-none d-lg-flex align-items-center gap-4">
+          <a href="signin.html"
+            class="text-white text-uppercase tracking-wide fs-7 fw-bold text-decoration-none hover-primary transition-all">
+            Sign In
+          </a>
+          <a href="reservation.html"
+            class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fs-7 fw-bold">
+            Find a Table
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-3">
+      <h5 class="offcanvas-title text-primary fw-bold"
+        style="font-family: 'Cormorant Garamond', serif; font-size: 2rem;"><img src="assets/images/logo.webp" alt="Logo"
+          style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);"></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul
+        class="navbar-nav justify-content-start flex-grow-1 ps-3 text-uppercase fs-6 tracking-wide mt-4 align-items-start text-start">
+        <li class="nav-item dropdown mb-3">
+          <a class="nav-link dropdown-toggle text-white" href="javascript:void(0)" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu bg-dark border border-light border-opacity-10 shadow-sm mt-2">
+            <li><a class="dropdown-item text-white hover-primary" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="about2.html">About</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="menu2.html">Menu</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-primary" href="blog2.html">Blog</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="contact2.html">Contact</a></li>
+        <li class="nav-item mb-3"><a class="nav-link text-white" href="admin/dashboard.html">Admin</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-hero mt-5">
+    <div class="container" data-aos="zoom-in" data-aos-duration="1300">
+      <span class="text-primary font-heading fst-italic fs-3 d-block mb-3">Journal & Updates</span>
+      <h1 class="display-3 fw-bold text-uppercase tracking-wide">Stackly Blog</h1>
+      <p class="text-white opacity-75 fs-5 mt-3 font-base mx-auto" style="max-width: 720px;">
+        Chef notes, behind-the-scenes stories, seasonal recipes, and dining inspiration.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section-padding bg-body py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+
+        <!-- MAIN -->
+        <div class="col-lg-8">
+
+          <!-- Featured Post -->
+          <div class="featured-wrap mb-5" data-aos="fade-up">
+            <div class="row g-0 align-items-stretch">
+              <div class="col-md-6">
+                <img src="assets/images/dish-1.webp" class="featured-img" alt="Featured Post">
+              </div>
+              <div class="col-md-6 d-flex">
+                <div class="p-4 p-lg-5 d-flex flex-column">
+                  <div class="d-flex flex-wrap gap-3 text-primary meta font-base mb-3">
+                    <span><i class="ph-bold ph-calendar me-1"></i> Oct 12, 2026</span>
+                    <span><i class="ph-bold ph-user me-1"></i> Chef Lorenzo</span>
+                    <span><i class="ph-bold ph-tag me-1"></i> Techniques</span>
+                  </div>
+
+                  <h2 class="text-white fw-bold font-heading text-uppercase tracking-wide mb-3">
+                    <a href="blog-details.html" class="text-white text-decoration-none hover-primary">
+                      The Secret to the Perfect Wagyu Sear
+                    </a>
+                  </h2>
+
+                  <p class="text-light opacity-50 font-base fs-6 mb-4">
+                    Learn how heat, timing, and resting create a crust that locks in umami — plus the exact mistakes to
+                    avoid.
+                  </p>
+
+                  <div class="mt-auto d-flex align-items-center justify-content-between">
+                    <a href="blog-details.html" class="text-primary font-heading fst-italic fs-5 text-decoration-none">
+                      Read Journal <i class="ph-bold ph-arrow-right fs-6 ms-1"></i>
+                    </a>
+                    <div class="text-light opacity-50 meta">
+                      <i class="ph-bold ph-clock me-1"></i> 6 min
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Posts Grid -->
+          <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+              <article class="post-card">
+                <img src="assets/images/dish-2.webp" class="post-thumb" alt="Post">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex flex-wrap gap-3 text-primary meta font-base mb-2">
+                    <span><i class="ph-bold ph-calendar me-1"></i> Sep 28, 2026</span>
+                    <span><i class="ph-bold ph-user me-1"></i> Admin</span>
+                  </div>
+                  <h4 class="text-white fw-bold mb-3 font-heading">
+                    <a href="blog-details.html" class="text-white text-decoration-none hover-primary">
+                      Sourcing Organic Ingredients
+                    </a>
+                  </h4>
+                  <p class="text-light opacity-50 font-base mb-4 flex-grow-1">
+                    A closer look at our farm partners and how soil quality shapes flavor on the plate.
+                  </p>
+                  <a href="blog-details.html"
+                    class="text-primary font-heading fst-italic fs-5 text-decoration-none mt-auto">
+                    Read Journal <i class="ph-bold ph-arrow-right fs-6 ms-1"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <article class="post-card">
+                <img src="assets/images/dish-3.webp" class="post-thumb" alt="Post">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex flex-wrap gap-3 text-primary meta font-base mb-2">
+                    <span><i class="ph-bold ph-calendar me-1"></i> Sep 14, 2026</span>
+                    <span><i class="ph-bold ph-user me-1"></i> Staff</span>
+                  </div>
+                  <h4 class="text-white fw-bold mb-3 font-heading">
+                    <a href="blog-details.html" class="text-white text-decoration-none hover-primary">
+                      Award-Winning Wine Pairings
+                    </a>
+                  </h4>
+                  <p class="text-light opacity-50 font-base mb-4 flex-grow-1">
+                    Our sommelier explains how acidity, body, and aroma match your favorite courses.
+                  </p>
+                  <a href="blog-details.html"
+                    class="text-primary font-heading fst-italic fs-5 text-decoration-none mt-auto">
+                    Read Journal <i class="ph-bold ph-arrow-right fs-6 ms-1"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+              <article class="post-card">
+                <img src="assets/images/dish-1.webp" class="post-thumb" alt="Post">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex flex-wrap gap-3 text-primary meta font-base mb-2">
+                    <span><i class="ph-bold ph-calendar me-1"></i> Aug 30, 2026</span>
+                    <span><i class="ph-bold ph-user me-1"></i> Chef Team</span>
+                  </div>
+                  <h4 class="text-white fw-bold mb-3 font-heading">
+                    <a href="blog-details.html" class="text-white text-decoration-none hover-primary">
+                      Plating Like an Artist
+                    </a>
+                  </h4>
+                  <p class="text-light opacity-50 font-base mb-4 flex-grow-1">
+                    Shapes, height, negative space — the simple rules we follow for elegant presentations.
+                  </p>
+                  <a href="blog-details.html"
+                    class="text-primary font-heading fst-italic fs-5 text-decoration-none mt-auto">
+                    Read Journal <i class="ph-bold ph-arrow-right fs-6 ms-1"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <article class="post-card">
+                <img src="assets/images/dish-2.webp" class="post-thumb" alt="Post">
+                <div class="p-4 d-flex flex-column flex-grow-1">
+                  <div class="d-flex flex-wrap gap-3 text-primary meta font-base mb-2">
+                    <span><i class="ph-bold ph-calendar me-1"></i> Aug 10, 2026</span>
+                    <span><i class="ph-bold ph-user me-1"></i> Admin</span>
+                  </div>
+                  <h4 class="text-white fw-bold mb-3 font-heading">
+                    <a href="blog-details.html" class="text-white text-decoration-none hover-primary">
+                      Seasonal Menu Planning
+                    </a>
+                  </h4>
+                  <p class="text-light opacity-50 font-base mb-4 flex-grow-1">
+                    How we design a tasting menu from market produce to final plate.
+                  </p>
+                  <a href="blog-details.html"
+                    class="text-primary font-heading fst-italic fs-5 text-decoration-none mt-auto">
+                    Read Journal <i class="ph-bold ph-arrow-right fs-6 ms-1"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <nav class="mt-5" aria-label="Blog pagination" data-aos="fade-up">
+            <ul class="pagination justify-content-center gap-2">
+              <li class="page-item disabled">
+                <a class="page-link bg-transparent border border-secondary text-light" href="javascript:void(0)"
+                  tabindex="-1">Prev</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link bg-primary border-primary text-dark" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link bg-transparent border border-secondary text-light" href="javascript:void(0)">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link bg-transparent border border-secondary text-light" href="javascript:void(0)">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link bg-transparent border border-secondary text-light"
+                  href="javascript:void(0)">Next</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="col-lg-4">
+
+          <!-- Search -->
+          <div class="panel p-4 mb-4" data-aos="fade-up" data-aos-delay="50">
+            <h5 class="text-white fw-bold mb-3 text-uppercase tracking-wide">Search</h5>
+            <div class="input-group">
+              <span class="input-group-text bg-transparent border border-secondary text-primary">
+                <i class="ph-bold ph-magnifying-glass"></i>
+              </span>
+              <input type="text" class="form-control search-input" placeholder="Search articles...">
+            </div>
+          </div>
+
+          <!-- Categories -->
+          <div class="panel p-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h5 class="text-white fw-bold mb-3 text-uppercase tracking-wide">Categories</h5>
+            <div class="d-grid gap-2">
+              <a href="javascript:void(0)" class="list-link d-flex justify-content-between align-items-center">
+                <span><i class="ph-bold ph-fork-knife me-2 text-primary"></i>Recipes</span>
+                <span class="text-light opacity-50">12</span>
+              </a>
+              <a href="javascript:void(0)" class="list-link d-flex justify-content-between align-items-center">
+                <span><i class="ph-bold ph-fire me-2 text-primary"></i>Techniques</span>
+                <span class="text-light opacity-50">7</span>
+              </a>
+              <a href="javascript:void(0)" class="list-link d-flex justify-content-between align-items-center">
+                <span><i class="ph-bold ph-leaf me-2 text-primary"></i>Ingredients</span>
+                <span class="text-light opacity-50">9</span>
+              </a>
+              <a href="javascript:void(0)" class="list-link d-flex justify-content-between align-items-center">
+                <span><i class="ph-bold ph-wine me-2 text-primary"></i>Wine Pairing</span>
+                <span class="text-light opacity-50">5</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Recent Posts -->
+          <div class="panel p-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+            <h5 class="text-white fw-bold mb-3 text-uppercase tracking-wide">Recent Posts</h5>
+
+            <div class="d-flex gap-3 mb-3">
+              <img src="assets/images/dish-3.webp" alt="Recent"
+                style="width:78px;height:62px;object-fit:cover;border:1px solid rgba(255,255,255,.10);">
+              <div>
+                <a href="blog-details.html" class="list-link fw-semibold d-block">Award-Winning Wine Pairings</a>
+                <div class="text-primary meta font-base mt-1"><i class="ph-bold ph-calendar me-1"></i> Sep 14, 2026
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 mb-3">
+              <img src="assets/images/dish-2.webp" alt="Recent"
+                style="width:78px;height:62px;object-fit:cover;border:1px solid rgba(255,255,255,.10);">
+              <div>
+                <a href="blog-details.html" class="list-link fw-semibold d-block">Sourcing Organic Ingredients</a>
+                <div class="text-primary meta font-base mt-1"><i class="ph-bold ph-calendar me-1"></i> Sep 28, 2026
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3">
+              <img src="assets/images/dish-1.webp" alt="Recent"
+                style="width:78px;height:62px;object-fit:cover;border:1px solid rgba(255,255,255,.10);">
+              <div>
+                <a href="blog-details.html" class="list-link fw-semibold d-block">Plating Like an Artist</a>
+                <div class="text-primary meta font-base mt-1"><i class="ph-bold ph-calendar me-1"></i> Aug 30, 2026
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tags -->
+          <div class="panel p-4" data-aos="fade-up" data-aos-delay="200">
+            <h5 class="text-white fw-bold mb-3 text-uppercase tracking-wide">Tags</h5>
+            <div>
+              <a href="javascript:void(0)" class="tag-pill"><i class="ph-bold ph-tag text-primary"></i> wagyu</a>
+              <a href="javascript:void(0)" class="tag-pill"><i class="ph-bold ph-tag text-primary"></i> organic</a>
+              <a href="javascript:void(0)" class="tag-pill"><i class="ph-bold ph-tag text-primary"></i> plating</a>
+              <a href="javascript:void(0)" class="tag-pill"><i class="ph-bold ph-tag text-primary"></i> wine</a>
+              <a href="javascript:void(0)" class="tag-pill"><i class="ph-bold ph-tag text-primary"></i> chef</a>
+              <a href="javascript:void(0)" class="tag-pill"><i class="ph-bold ph-tag text-primary"></i> tasting</a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-body border-top border-secondary pt-5 pb-4">
+    <div class="container pt-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+          <h2 class="text-white fw-bold mb-4" style="font-family: 'Cormorant Garamond', serif;"><a href="index.html"
+              style="text-decoration: none;"><img src="assets/images/logo.webp" alt="Logo"
+                style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);"></a></h2>
+          <p class="text-light opacity-50 pe-lg-4 font-base mb-4">Experience the pinnacle of fine dining. Elegant
+            atmosphere,
+            organic ingredients, and master chefs.</p>
+          <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-facebook-logo"></i></a>
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-instagram-logo"></i></a>
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-twitter-logo"></i></a>
+            <a href="javascript:void(0)"
+              class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
+                class="ph-fill ph-linkedin-logo"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+          <h4 class="text-white font-heading mb-4 fst-italic" style="font-family: 'Cormorant Garamond', serif;">Quick
+            Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Home</a></li>
+            <li class="mb-2"><a href="about.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">About Us</a></li>
+            <li class="mb-2"><a href="menu.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Our Menu</a></li>
+            <li class="mb-2"><a href="blog.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Latest Blog</a></li>
+            <li class="mb-2"><a href="contact.html"
+                class="text-light opacity-50 text-decoration-none hover-primary transition-all">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
+          <h4 class="text-white font-heading mb-4 fst-italic" style="font-family: 'Cormorant Garamond', serif;">Services
+          </h4>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-light opacity-50">Fine Dining</li>
+            <li class="mb-2 text-light opacity-50">Private Events</li>
+            <li class="mb-2 text-light opacity-50">Catering</li>
+            <li class="mb-2 text-light opacity-50">Wine Tasting</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 text-center text-md-end">
+          <h4 class="text-white font-heading mb-4 fst-italic" style="font-family: 'Cormorant Garamond', serif;">Contact
+          </h4>
+          <p class="text-light opacity-50 font-base mb-1">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
+          <p class="text-primary fw-bold font-base fs-5 my-3">+1 (555) 123-4567</p>
+          <p class="text-light opacity-50 font-base mb-0">hello@stackly.com</p>
+        </div>
+      </div>
+
+      <div
+        class="border-top border-secondary border-opacity-50 mt-5 pt-4 text-center text-light opacity-50 font-base fs-7 text-uppercase tracking-wide">
+        <p>&copy; 2026 Stackly Restaurant. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // $(document).on('ready', function () {
+    // initialization of aos
+    AOS.init({
+      duration: 650,
+      once: false,
+      mirror: true,
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.AOS) AOS.init({ once: true, duration: 900 });
+    });
+  </script>
+</body>
+
+</html>
