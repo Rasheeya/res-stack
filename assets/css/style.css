@@ -126,21 +126,23 @@ h6,
 
 .navbar {
   transition: all 0.3s ease;
-  padding: 1rem 0;
+  padding: 0.25rem 0 !important;
 }
 
 .navbar.sticky-top {
   background-color: var(--bs-body-bg);
   box-shadow: var(--bs-box-shadow-sm);
-  padding: 0.5rem 0;
+  padding: 0.15rem 0 !important;
 }
 
 .navbar .container {
   position: relative;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
 }
 
 .navbar .navbar-brand img {
-  height: 50px;
+  height: 32px !important;
 }
 
 .navbar .nav-link {
@@ -479,4 +481,126 @@ h6,
   transform: translateX(5px);
 }
 
-/*# sourceMappingURL=style.css.map */
+/*  
+ R e s p o n s i v e  
+ B r e a k p o i n t s  
+ * /  
+ 
+
+/* --- Custom Responsive Breakpoints as Requested --- */
+
+/* 1024px - iPad Pro / Small Laptops */
+@media (max-width: 1024px) {
+  .section-padding { padding: 80px 0; }
+  .display-1 { font-size: 4.5rem; }
+  .display-2 { font-size: 4rem; }
+  .display-3 { font-size: 3.5rem; }
+  .display-4 { font-size: 3rem; }
+  .hero-slider .swiper-slide h1 { font-size: 3.5rem; }
+  .food-card .card-img-top { height: 220px; }
+  .offcanvas.offcanvas-end { width: 50% !important; }
+}
+
+/* 768px - Tablets / iPads */
+@media (max-width: 768px) {
+  .section-padding { padding: 60px 15px; }
+  .navbar { padding: 0.35rem 15px !important; }
+  .hero-section, .page-header, .page-hero { padding-left: 15px; padding-right: 15px; }
+  footer { padding-left: 15px; padding-right: 15px; }
+  .display-1 { font-size: 3.5rem; }
+  .display-2 { font-size: 3rem; }
+  .display-3 { font-size: 2.5rem; }
+  .display-4 { font-size: 2.25rem; }
+  .hero-slider .swiper-slide h1 { font-size: 2.5rem; }
+  .section-header .title { font-size: 2rem; }
+  .food-card .card-img-top { height: 200px; }
+  .navbar-brand img { height: 28px !important; }
+  .offcanvas.offcanvas-end { width: 60% !important; }
+  .img-fluid.w-100 { object-fit: cover; }
+  
+  /* Fix spacing in flex containers */
+  .d-flex.flex-column.flex-md-row {
+     gap: 15px !important;
+  }
+}
+
+/* 425px - Large Mobile Phones */
+@media (max-width: 425px) {
+  .section-padding { padding: 50px 15px; }
+  .navbar { padding: 0.3rem 15px !important; }
+  .hero-section, .page-header, .page-hero { padding-left: 15px; padding-right: 15px; }
+  footer { padding-left: 15px; padding-right: 15px; }
+  .display-1 { font-size: 2.75rem; }
+  .display-2 { font-size: 2.5rem; }
+  .display-3 { font-size: 2.25rem; }
+  .display-4 { font-size: 2rem; }
+  .hero-slider .swiper-slide h1 { font-size: 2rem; }
+  .hero-slider .swiper-slide p { font-size: 1rem; }
+  .section-header .title { font-size: 1.75rem; }
+  .food-card .card-img-top { height: 180px; }
+  .offcanvas.offcanvas-end { width: 75% !important; }
+  .btn { padding: 0.5rem 1rem; font-size: 0.9rem; }
+  .navbar-brand img { height: 26px !important; }
+  
+  /* Cards stack better with margin */
+  .col-md-3, .col-md-4, .col-md-6 { margin-bottom: 20px; }
+
+  /* Ornate frame mobile padding */
+  .ornate-frame { padding: 2rem !important; }
+}
+
+/* 375px - Small Mobile Phones */
+@media (max-width: 375px) {
+  .section-padding { padding: 40px 15px; }
+  .navbar { padding: 0.25rem 15px !important; }
+  .hero-section, .page-header, .page-hero { padding-left: 15px; padding-right: 15px; }
+  footer { padding-left: 15px; padding-right: 15px; }
+  .display-1 { font-size: 2.25rem; }
+  .display-2 { font-size: 2rem; }
+  .display-3 { font-size: 1.75rem; }
+  .display-4 { font-size: 1.5rem; }
+  .hero-slider .swiper-slide h1 { font-size: 1.75rem; }
+  .hero-slider .swiper-slide p { font-size: 0.9rem; }
+  .section-header .title { font-size: 1.5rem; }
+  .food-card .card-img-top { height: 160px; }
+  .offcanvas.offcanvas-end { width: 85% !important; }
+  .btn { padding: 0.4rem 0.8rem; font-size: 0.85rem; }
+  .navbar-brand img { height: 24px !important; }
+  .section-header .subtitle { font-size: 0.75rem; }
+  
+  /* Make inline items stack properly */
+  .d-flex.align-items-center.gap-4 {
+     flex-direction: column !important;
+     align-items: flex-start !important;
+     gap: 10px !important;
+  }
+
+  /* Ornate frame mobile padding */
+  .ornate-frame { padding: 1.5rem !important; }
+}
+
+/* --- Admin Panel Mobile Responsiveness Overrides --- */
+.top-header {
+  padding: 0.6rem 2rem !important;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  
+  .top-header {
+    padding: 0.5rem 15px !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999 !important;
+  }
+}
+
+/* Global dropdown option visibility fix for dark mode */
+.form-select option,
+select option {
+  background-color: #1a1b1a !important;
+  color: #ffffff !important;
+}
