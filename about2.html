@@ -23,7 +23,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
   <style>
     .page-hero {
@@ -32,7 +32,7 @@
       overflow: hidden;
       background:
         linear-gradient(rgba(10, 11, 10, .82), rgba(10, 11, 10, .92)),
-        url('assets/images/hero-bg.webp') center/cover no-repeat;
+        url('./assets/images/hero-bg.webp') center/cover no-repeat;
       text-align: center;
       color: #fff;
     }
@@ -112,7 +112,7 @@
     <nav class="navbar navbar-expand-lg py-3">
       <div class="container pb-3 mt-2">
         <a class="navbar-brand text-white fs-2 fw-bold" style="font-family: 'Cormorant Garamond', serif;"
-          href="index.html"><img src="assets/images/logo.webp" alt="Logo"
+          href="index.html"><img src="./assets/images/logo.webp" alt="Logo"
             style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);">
         </a>
 
@@ -141,7 +141,7 @@
 
         <div class="d-none d-lg-flex align-items-center gap-4">
           <a href="signin.html"
-            class="text-white text-uppercase tracking-wide fs-7 fw-bold text-decoration-none hover-primary transition-all">
+                        class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding-right: 0;">
             Sign In
           </a>
           <a href="reservation.html"
@@ -157,7 +157,7 @@
   <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar">
     <div class="offcanvas-header border-bottom border-secondary border-opacity-25 pb-3">
       <h5 class="offcanvas-title text-primary fw-bold"
-        style="font-family: 'Cormorant Garamond', serif; font-size: 2rem;"><img src="assets/images/logo.webp" alt="Logo"
+        style="font-family: 'Cormorant Garamond', serif; font-size: 2rem;"><img src="./assets/images/logo.webp" alt="Logo"
           style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);"></h5>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
     </div>
@@ -175,9 +175,13 @@
         <li class="nav-item mb-3"><a class="nav-link text-white" href="blog2.html">Blog</a></li>
         <li class="nav-item mb-3"><a class="nav-link text-white" href="contact2.html">Contact</a></li>
         <li class="nav-item mb-3"><a class="nav-link text-white" href="admin/dashboard.html">Admin</a></li>
-      </ul>
+            </ul>
+            <div class="mt-4 pt-4 border-top border-secondary border-opacity-25 d-flex flex-column gap-3 ps-3 pe-4 mb-4">
+                <a href="signin.html" class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding: 0;">Sign In</a>
+                <a href="reservation.html" class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fs-7 fw-bold text-center">Find a Table</a>
+            </div>
+        </div>
     </div>
-  </div>
 
   <!-- HERO -->
   <section class="page-hero mt-5">
@@ -195,25 +199,25 @@
       <div class="row g-3 mt-5 justify-content-center">
         <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
           <div class="glass-panel py-3 px-3">
-            <div class="text-primary fw-bold fs-2 font-heading">10+</div>
+            <div class="text-primary fw-bold fs-2 font-heading"><span class="counter-value" data-target="10">0</span>+</div>
             <div class="text-light opacity-50 text-uppercase fs-7 tracking-wide">Years</div>
           </div>
         </div>
         <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="150">
           <div class="glass-panel py-3 px-3">
-            <div class="text-primary fw-bold fs-2 font-heading">50k</div>
+            <div class="text-primary fw-bold fs-2 font-heading"><span class="counter-value" data-target="50">0</span>k</div>
             <div class="text-light opacity-50 text-uppercase fs-7 tracking-wide">Guests</div>
           </div>
         </div>
         <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
           <div class="glass-panel py-3 px-3">
-            <div class="text-primary fw-bold fs-2 font-heading">120+</div>
+            <div class="text-primary fw-bold fs-2 font-heading"><span class="counter-value" data-target="120">0</span>+</div>
             <div class="text-light opacity-50 text-uppercase fs-7 tracking-wide">Dishes</div>
           </div>
         </div>
         <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="250">
           <div class="glass-panel py-3 px-3">
-            <div class="text-primary fw-bold fs-2 font-heading">4.9</div>
+            <div class="text-primary fw-bold fs-2 font-heading"><span class="counter-value" data-target="4.9" data-decimals="1">0.0</span></div>
             <div class="text-light opacity-50 text-uppercase fs-7 tracking-wide">Rating</div>
           </div>
         </div>
@@ -343,7 +347,7 @@
 
   <!-- CTA -->
   <section class="py-5 bg-image position-relative"
-    style="background: url('assets/images/dish-2.webp') center/cover fixed;">
+    style="background: url('./assets/images/dish-2.webp') center/cover fixed;">
     <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(10, 11, 10, 0.85);"></div>
     <div class="container position-relative z-2 py-5 text-center" data-aos="fade-up">
       <h2 class="text-primary font-heading fst-italic fs-2 mb-3">Reservations</h2>
@@ -358,28 +362,196 @@
     </div>
   </section>
 
+  <!-- Our Core Mission -->
+  <section class="section-padding py-5" style="background: rgba(10, 11, 10, 0.95);">
+    <div class="container py-5">
+      <div class="row align-items-center g-5 flex-row-reverse">
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <div class="glass-panel p-2 d-inline-block">
+            <img src="./assets/images/mission.webp" class="img-fluid" alt="Mission" style="border: 1px solid rgba(197, 160, 89, 0.35); filter: grayscale(40%);">
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Why We Exist</span>
+          <h2 class="display-5 text-white fw-bold mb-4 font-heading text-uppercase tracking-wide">Our Core Mission</h2>
+          <p class="text-white opacity-50 font-base fs-5 lh-lg">To elevate the art of dining by transforming simple, honest ingredients into extraordinary culinary experiences, bringing joy and inspiration to every table.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision For The Future -->
+  <section class="section-padding py-5 bg-body border-top border-secondary border-opacity-25">
+    <div class="container py-5">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center" data-aos="zoom-in-up">
+          <div class="glass-panel p-2 d-inline-block">
+            <img src="./assets/images/vision.webp" class="img-fluid" alt="Vision" style="border: 1px solid rgba(197, 160, 89, 0.35); filter: sepia(20%);">
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="zoom-in-down">
+          <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Looking Ahead</span>
+          <h2 class="display-5 text-white fw-bold mb-4 font-heading text-uppercase tracking-wide">Vision For The Future</h2>
+          <p class="text-white opacity-50 font-base fs-5 lh-lg">We aim to set a new global standard for sustainable fine dining, proving that luxury and environmental responsibility can coexist perfectly on the plate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Chefs -->
+  <section class="section-padding py-5" style="background: rgba(10, 11, 10, 0.95);">
+    <div class="container py-5">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">The Artisans</span>
+        <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide">Meet The Chefs</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-card text-center p-5 h-100">
+            <div class="rounded-circle overflow-hidden mx-auto mb-4" style="width: 160px; height: 160px; border: 2px solid rgba(197, 160, 89, 0.5);">
+              <img src="./assets/images/chef-head.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Head Chef">
+            </div>
+            <h4 class="text-white font-heading">Alessandro Bianchi</h4>
+            <p class="text-primary text-uppercase tracking-wide fs-7 mb-0">Head Chef</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card text-center p-5 h-100">
+            <div class="rounded-circle overflow-hidden mx-auto mb-4" style="width: 160px; height: 160px; border: 2px solid rgba(197, 160, 89, 0.5);">
+              <img src="./assets/images/chef-pastry.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Pastry Chef">
+            </div>
+            <h4 class="text-white font-heading">Camilla Rossi</h4>
+            <p class="text-primary text-uppercase tracking-wide fs-7 mb-0">Executive Pastry Chef</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-card text-center p-5 h-100">
+            <div class="rounded-circle overflow-hidden mx-auto mb-4" style="width: 160px; height: 160px; border: 2px solid rgba(197, 160, 89, 0.5);">
+              <img src="./assets/images/chef-sommelier.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Sommelier">
+            </div>
+            <h4 class="text-white font-heading">Marcus Thorne</h4>
+            <p class="text-primary text-uppercase tracking-wide fs-7 mb-0">Master Sommelier</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sourcing & Ingredients -->
+  <section class="section-padding py-5 bg-body border-top border-secondary border-opacity-25">
+    <div class="container py-5">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Our Foundation</span>
+        <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide">Sourcing & Ingredients</h2>
+      </div>
+      <div class="row g-4 text-center">
+        <div class="col-md-3 col-6" data-aos="flip-left" data-aos-delay="100">
+          <div class="glass-panel p-4 h-100">
+            <i class="ph-light ph-farm text-primary mb-3" style="font-size: 3.5rem;"></i>
+            <h5 class="text-white font-heading">Local Farms</h5>
+            <p class="text-light opacity-50 fs-7 mb-0">Supporting regional agriculture.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" data-aos="flip-left" data-aos-delay="200">
+          <div class="glass-panel p-4 h-100">
+            <i class="ph-light ph-drop text-primary mb-3" style="font-size: 3.5rem;"></i>
+            <h5 class="text-white font-heading">Pure Water</h5>
+            <p class="text-light opacity-50 fs-7 mb-0">Artesian sources for preparation.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" data-aos="flip-left" data-aos-delay="300">
+          <div class="glass-panel p-4 h-100">
+            <i class="ph-light ph-fish text-primary mb-3" style="font-size: 3.5rem;"></i>
+            <h5 class="text-white font-heading">Sustainable Catch</h5>
+            <p class="text-light opacity-50 fs-7 mb-0">Responsible ocean sourcing.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6" data-aos="flip-left" data-aos-delay="400">
+          <div class="glass-panel p-4 h-100">
+            <i class="ph-light ph-plant text-primary mb-3" style="font-size: 3.5rem;"></i>
+            <h5 class="text-white font-heading">Organic Only</h5>
+            <p class="text-light opacity-50 fs-7 mb-0">Zero pesticides or chemicals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Stories -->
+  <section class="section-padding py-5" style="background: rgba(10, 11, 10, 0.95);">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center" data-aos="zoom-in">
+          <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Experiences</span>
+          <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide mb-5">Guest Stories</h2>
+          <div class="quote-box p-5 position-relative">
+            <i class="ph-fill ph-quotes text-secondary opacity-25" style="font-size: 6rem; position: absolute; top: 10%; left: 50%; transform: translateX(-50%); z-index: 0;"></i>
+            <p class="text-white fs-4 fst-italic position-relative z-1 mb-4">"Dining at Stackly is more than just eating; it's a theatrical performance of flavors, textures, and hospitality. Truly a night to remember."</p>
+            <div class="position-relative z-1">
+              <h5 class="text-primary font-heading mb-1">Eleanor Rigby</h5>
+              <span class="text-light opacity-50 fs-7 text-uppercase tracking-wide">Gastronomy Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Media -->
+  <section class="section-padding py-5 bg-body border-top border-secondary border-opacity-25">
+    <div class="container py-5 text-center">
+      <div data-aos="fade-up">
+        <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Press</span>
+        <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide mb-5">Awards & Media</h2>
+      </div>
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-card p-4 text-center">
+            <i class="ph-fill ph-star text-warning" style="font-size: 3rem;"></i>
+            <h4 class="text-white mt-3 font-heading mb-1">3 Michelin Stars</h4>
+            <p class="text-light opacity-50 fs-7 mb-0">Awarded consecutively since 2024.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card p-4 text-center">
+            <i class="ph-fill ph-newspaper text-warning" style="font-size: 3rem;"></i>
+            <h4 class="text-white mt-3 font-heading mb-1">"Best New Concept"</h4>
+            <p class="text-light opacity-50 fs-7 mb-0">The Culinary Times, 2025.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-card p-4 text-center">
+            <i class="ph-fill ph-globe text-warning" style="font-size: 3rem;"></i>
+            <h4 class="text-white mt-3 font-heading mb-1">Top 50 Global</h4>
+            <p class="text-light opacity-50 fs-7 mb-0">World's Best Restaurants List.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-body border-top border-secondary pt-5 pb-4">
     <div class="container pt-5">
       <div class="row g-5">
         <div class="col-lg-3 col-md-6 mb-4 text-center text-md-start">
           <h2 class="text-white fw-bold mb-4" style="font-family: 'Cormorant Garamond', serif;"><a href="index.html"
-              style="text-decoration: none;"><img src="assets/images/logo.webp" alt="Logo"
+              style="text-decoration: none;"><img src="./assets/images/logo.webp" alt="Logo"
                 style="height: 1.5em; vertical-align: middle; transform: translateY(-2px);"></a></h2>
           <p class="text-light opacity-50 pe-lg-4 font-base mb-4">Experience the pinnacle of fine dining. Elegant
             atmosphere,
             organic ingredients, and master chefs.</p>
           <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-            <a href="javascript:void(0)"
+            <a href="404.html"
               class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                 class="ph-fill ph-facebook-logo"></i></a>
-            <a href="javascript:void(0)"
+            <a href="404.html"
               class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                 class="ph-fill ph-instagram-logo"></i></a>
-            <a href="javascript:void(0)"
+            <a href="404.html"
               class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                 class="ph-fill ph-twitter-logo"></i></a>
-            <a href="javascript:void(0)"
+            <a href="404.html"
               class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                 class="ph-fill ph-linkedin-logo"></i></a>
           </div>
@@ -429,13 +601,11 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="./assets/js/main.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (window.AOS) AOS.init({ once: true, duration: 900 });
-    });
-  </script>
+
+
 </body>
+
 
 </html>

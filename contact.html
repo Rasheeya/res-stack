@@ -57,7 +57,7 @@
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-4">
                     <a href="signin.html"
-                        class="text-white text-uppercase tracking-wide fs-7 fw-bold text-decoration-none hover-primary transition-all">
+                        class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding-right: 0;">
                         Sign In
                     </a>
                     <a href="reservation.html"
@@ -89,10 +89,14 @@
                 </li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="about.html">About Us</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="menu.html">Menu</a></li>
-                <li class="nav-item mb-3"><a class="nav-link text-white" href="reservation.html">Reservation</a></li>
+                <li class="nav-item mb-3"><a class="nav-link text-white" href="blog.html">Blog</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-primary" href="contact.html">Contact</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="admin/dashboard.html">Admin</a></li>
             </ul>
+            <div class="mt-4 pt-4 border-top border-secondary border-opacity-25 d-flex flex-column gap-3 ps-3 pe-4 mb-4">
+                <a href="signin.html" class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding: 0;">Sign In</a>
+                <a href="reservation.html" class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fs-7 fw-bold text-center">Find a Table</a>
+            </div>
         </div>
     </div>
 
@@ -132,22 +136,22 @@
             <div class="row justify-content-center mt-5 pt-5">
                 <div class="col-lg-8" data-aos="fade-up">
                     <div class="bg-light p-5 border border-secondary border-opacity-50">
-                        <form>
+                        <form id="contactForm">
                             <div class="row g-4">
                                 <div class="col-md-6">
-                                    <input type="text"
+                                    <input type="text" id="contactName" name="name"
                                         class="form-control bg-transparent border-secondary text-white rounded-0 py-3"
-                                        placeholder="Your Name">
+                                        placeholder="Your Name" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email"
+                                    <input type="email" id="contactEmail" name="email"
                                         class="form-control bg-transparent border-secondary text-white rounded-0 py-3"
-                                        placeholder="Your Email">
+                                        placeholder="Your Email" required>
                                 </div>
                                 <div class="col-12">
-                                    <textarea
+                                    <textarea id="contactMessage" name="message"
                                         class="form-control bg-transparent border-secondary text-white rounded-0 py-3"
-                                        rows="5" placeholder="Your Message"></textarea>
+                                        rows="5" placeholder="Your Message" required></textarea>
                                 </div>
                                 <div class="col-12 text-center mt-4">
                                     <button type="submit"
@@ -175,16 +179,16 @@
                         Elegant atmosphere,
                         organic ingredients, and master chefs.</p>
                     <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-facebook-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-instagram-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-twitter-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-linkedin-logo"></i></a>
                     </div>

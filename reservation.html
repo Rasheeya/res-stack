@@ -58,7 +58,7 @@
                 <!-- Actions -->
                 <div class="d-none d-lg-flex align-items-center gap-4">
                     <a href="signin.html"
-                        class="text-white text-uppercase tracking-wide fs-7 fw-bold text-decoration-none hover-primary transition-all">
+                        class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding-right: 0;">
                         Sign In
                     </a>
                     <a href="reservation.html"
@@ -90,10 +90,14 @@
                 </li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="about.html">About Us</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="menu.html">Menu</a></li>
-                <li class="nav-item mb-3"><a class="nav-link text-primary" href="reservation.html">Reservation</a></li>
+                <li class="nav-item mb-3"><a class="nav-link text-white" href="blog.html">Blog</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="contact.html">Contact</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="admin/dashboard.html">Admin</a></li>
             </ul>
+            <div class="mt-4 pt-4 border-top border-secondary border-opacity-25 d-flex flex-column gap-3 ps-3 pe-4 mb-4">
+                <a href="signin.html" class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding: 0;">Sign In</a>
+                <a href="reservation.html" class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fs-7 fw-bold text-center">Find a Table</a>
+            </div>
         </div>
     </div>
 
@@ -122,26 +126,26 @@
                         <h2 class="display-5 text-white fw-bold mb-4 font-heading text-uppercase tracking-wide">Reserve
                             Your Table</h2>
 
-                        <form>
+                        <form id="reservationForm">
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <label
                                         class="form-label text-muted fs-7 text-uppercase tracking-wide fw-bold">Name</label>
-                                    <input type="text"
+                                    <input type="text" id="reserveName" name="name"
                                         class="form-control bg-transparent border-secondary text-white rounded-0 py-3"
-                                        placeholder="John Doe">
+                                        placeholder="John Doe" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label
                                         class="form-label text-muted fs-7 text-uppercase tracking-wide fw-bold">Phone</label>
-                                    <input type="tel"
+                                    <input type="tel" id="reservePhone" name="phone"
                                         class="form-control bg-transparent border-secondary text-white rounded-0 py-3"
-                                        placeholder="+1 (555) 000-0000">
+                                        placeholder="+1 (555) 000-0000" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label
                                         class="form-label text-muted fs-7 text-uppercase tracking-wide fw-bold">Guests</label>
-                                    <select
+                                    <select id="reserveGuests" name="guests"
                                         class="form-select bg-transparent border-secondary text-white rounded-0 py-3">
                                         <option class="text-dark">1 Person</option>
                                         <option class="text-dark" selected>2 People</option>
@@ -152,13 +156,13 @@
                                 <div class="col-md-4">
                                     <label
                                         class="form-label text-muted fs-7 text-uppercase tracking-wide fw-bold">Date</label>
-                                    <input type="date"
-                                        class="form-control bg-transparent border-secondary text-white rounded-0 py-3">
+                                    <input type="date" id="reserveDate" name="date"
+                                        class="form-control bg-transparent border-secondary text-white rounded-0 py-3" required>
                                 </div>
                                 <div class="col-md-4">
                                     <label
                                         class="form-label text-muted fs-7 text-uppercase tracking-wide fw-bold">Time</label>
-                                    <select
+                                    <select id="reserveTime" name="time"
                                         class="form-select bg-transparent border-secondary text-white rounded-0 py-3">
                                         <option class="text-dark">6:00 PM</option>
                                         <option class="text-dark" selected>7:00 PM</option>
@@ -192,16 +196,16 @@
                         Elegant atmosphere,
                         organic ingredients, and master chefs.</p>
                     <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-facebook-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-instagram-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-twitter-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-linkedin-logo"></i></a>
                     </div>

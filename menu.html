@@ -57,7 +57,7 @@
                 <!-- Actions -->
                 <div class="d-none d-lg-flex align-items-center gap-4">
                     <a href="signin.html"
-                        class="text-white text-uppercase tracking-wide fs-7 fw-bold text-decoration-none hover-primary transition-all">
+                        class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding-right: 0;">
                         Sign In
                     </a>
                     <a href="reservation.html"
@@ -89,10 +89,14 @@
                 </li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="about.html">About Us</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-primary" href="menu.html">Menu</a></li>
-                <li class="nav-item mb-3"><a class="nav-link text-white" href="reservation.html">Reservation</a></li>
+                <li class="nav-item mb-3"><a class="nav-link text-white" href="blog.html">Blog</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="contact.html">Contact</a></li>
                 <li class="nav-item mb-3"><a class="nav-link text-white" href="admin/dashboard.html">Admin</a></li>
             </ul>
+            <div class="mt-4 pt-4 border-top border-secondary border-opacity-25 d-flex flex-column gap-3 ps-3 pe-4 mb-4">
+                <a href="signin.html" class="nav-link text-white text-uppercase tracking-wide hover-primary transition-all" style="padding: 0;">Sign In</a>
+                <a href="reservation.html" class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fs-7 fw-bold text-center">Find a Table</a>
+            </div>
         </div>
     </div>
 
@@ -399,6 +403,209 @@
         </div>
     </section>
 
+  <!-- Chef's Specials -->
+  <section class="section-padding bg-dark border-bottom border-secondary border-opacity-50">
+      <div class="container py-5">
+          <div class="text-center mb-5" data-aos="fade-up">
+              <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Signature Dishes</span>
+              <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide">Chef's Specials</h2>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="card bg-transparent border border-secondary border-opacity-50 hover-border-primary transition-all h-100">
+                      <img src="./assets/images/Truffle.webp" class="card-img-top object-fit-cover" style="height: 200px;" alt="Special">
+                      <div class="card-body p-4 text-center">
+                          <h4 class="text-white font-heading">Truffle Filet Mignon</h4>
+                          <p class="text-muted fs-7">Premium cut, aged 35 days, served with wild mushrooms.</p>
+                          <span class="text-primary fw-bold fs-4">$85</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="card bg-transparent border border-secondary border-opacity-50 hover-border-primary transition-all h-100">
+                      <img src="./assets/images/Alaskan King.webp" class="card-img-top object-fit-cover" style="height: 200px;" alt="Special">
+                      <div class="card-body p-4 text-center">
+                          <h4 class="text-white font-heading">Alaskan King Crab</h4>
+                          <p class="text-muted fs-7">Garlic herb butter, charred lemon, asparagus.</p>
+                          <span class="text-primary fw-bold fs-4">$95</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="card bg-transparent border border-secondary border-opacity-50 hover-border-primary transition-all h-100">
+                      <img src="./assets/images/Lobster.webp" class="card-img-top object-fit-cover" style="height: 200px;" alt="Special">
+                      <div class="card-body p-4 text-center">
+                          <h4 class="text-white font-heading">Lobster Thermidor</h4>
+                          <p class="text-muted fs-7">Cognac cream sauce, gruyere cheese, fresh herbs.</p>
+                          <span class="text-primary fw-bold fs-4">$110</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Vegan Options -->
+  <section class="section-padding bg-body py-5 border-bottom border-secondary border-opacity-50">
+      <div class="container py-5">
+          <div class="text-center mb-5" data-aos="fade-up">
+              <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Plant Based</span>
+              <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide">Vegan Options</h2>
+          </div>
+          <div class="row justify-content-center">
+              <div class="col-lg-8" data-aos="fade-up">
+                  <ul class="list-unstyled">
+                      <li class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+                          <img src="assets/images/roasted_cauliflower_steak.webp" alt="Roasted Cauliflower Steak" class="img-fluid rounded-circle me-3 object-fit-cover border border-primary border-opacity-25 shadow-sm" style="width: 60px; height: 60px;">
+                          <div class="flex-grow-1">
+                              <h5 class="text-white font-heading fs-4 mb-1">Roasted Cauliflower Steak</h5>
+                              <p class="text-muted fs-7 m-0">Chimichurri, toasted pine nuts, pomegranate.</p>
+                          </div>
+                          <span class="text-primary fw-bold fs-4">$28</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+                          <img src="assets/images/wild_mushroom_wellington.webp" alt="Wild Mushroom Wellington" class="img-fluid rounded-circle me-3 object-fit-cover border border-primary border-opacity-25 shadow-sm" style="width: 60px; height: 60px;">
+                          <div class="flex-grow-1">
+                              <h5 class="text-white font-heading fs-4 mb-1">Wild Mushroom Wellington</h5>
+                              <p class="text-muted fs-7 m-0">Flaky pastry, spinach, red wine reduction.</p>
+                          </div>
+                          <span class="text-primary fw-bold fs-4">$32</span>
+                      </li>
+                      <li class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+                          <img src="assets/images/butternut_squash_ravioli.webp" alt="Butternut Squash Ravioli" class="img-fluid rounded-circle me-3 object-fit-cover border border-primary border-opacity-25 shadow-sm" style="width: 60px; height: 60px;">
+                          <div class="flex-grow-1">
+                              <h5 class="text-white font-heading fs-4 mb-1">Butternut Squash Ravioli</h5>
+                              <p class="text-muted fs-7 m-0">Sage butter, vegan parmesan, amaretti.</p>
+                          </div>
+                          <span class="text-primary fw-bold fs-4">$26</span>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Seasonal Offerings -->
+  <section class="section-padding bg-dark py-5 border-bottom border-secondary border-opacity-50">
+      <div class="container py-5 text-center">
+          <div data-aos="zoom-in">
+              <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Limited Time</span>
+              <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide mb-4">Seasonal Offerings</h2>
+              <p class="text-white opacity-50 fs-5 mb-5 mx-auto" style="max-width: 600px;">Experience the flavors of the season with our specially curated menu items available only for a limited time.</p>
+          </div>
+          <div class="row g-4 justify-content-center">
+              <div class="col-md-5" data-aos="fade-right">
+                  <div class="p-4 border border-primary border-opacity-50 position-relative">
+                      <img src="assets/images/autumn_harvest_soup.webp" alt="Autumn Harvest Soup" class="img-fluid w-100 object-fit-cover mb-3" style="height: 200px;">
+                      <h4 class="text-white font-heading">Autumn Harvest Soup</h4>
+                      <p class="text-muted fs-7">Roasted pumpkin, nutmeg, toasted seeds.</p>
+                      <span class="text-primary fw-bold fs-5">$14</span>
+                  </div>
+              </div>
+              <div class="col-md-5" data-aos="fade-left">
+                  <div class="p-4 border border-primary border-opacity-50 position-relative">
+                      <img src="assets/images/spring_pea_risotto.webp" alt="Spring Pea Risotto" class="img-fluid w-100 object-fit-cover mb-3" style="height: 200px;">
+                      <h4 class="text-white font-heading">Spring Pea Risotto</h4>
+                      <p class="text-muted fs-7">Mint, mascarpone, meyer lemon.</p>
+                      <span class="text-primary fw-bold fs-5">$28</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Wine Pairings -->
+  <section class="section-padding bg-body py-5 border-bottom border-secondary border-opacity-50">
+      <div class="container py-5">
+          <div class="row align-items-center g-5">
+              <div class="col-lg-6" data-aos="fade-right">
+                  <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Sommelier's Choice</span>
+                  <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide mb-4">Wine Pairings</h2>
+                  <p class="text-white opacity-50 fs-5 mb-4 lh-lg">Enhance your dining experience with perfectly matched wines from our extensive cellar, carefully selected to complement each dish.</p>
+                  <a href="404.html" class="btn btn-outline-primary rounded-0 px-4 py-2 text-uppercase tracking-wide fw-bold">View Wine List</a>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left">
+                  <ul class="list-unstyled">
+                      <li class="mb-4">
+                          <h5 class="text-white font-heading fs-4 mb-1">Cabernet Sauvignon, Napa Valley</h5>
+                          <p class="text-muted fs-7">Pairs perfectly with Wagyu Ribeye. <span class="text-primary">$25/glass</span></p>
+                      </li>
+                      <li class="mb-4">
+                          <h5 class="text-white font-heading fs-4 mb-1">Chardonnay, Burgundy</h5>
+                          <p class="text-muted fs-7">Ideal with Lobster Bisque. <span class="text-primary">$22/glass</span></p>
+                      </li>
+                      <li>
+                          <h5 class="text-white font-heading fs-4 mb-1">Pinot Noir, Willamette Valley</h5>
+                          <p class="text-muted fs-7">Complements our Truffle Risotto. <span class="text-primary">$20/glass</span></p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Kids Menu -->
+  <section class="section-padding bg-dark py-5 border-bottom border-secondary border-opacity-50">
+      <div class="container py-5">
+          <div class="text-center mb-5" data-aos="fade-up">
+              <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">For The Little Ones</span>
+              <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide">Kids Menu</h2>
+          </div>
+          <div class="row g-4 justify-content-center">
+              <div class="col-md-3 col-sm-6 text-center" data-aos="flip-up" data-aos-delay="100">
+                  <img src="./C/images/Mac.webp" alt="Mac & Cheese" class="img-fluid rounded-circle mb-3 object-fit-cover" style="width: 100px; height: 100px; border: 2px solid var(--bs-primary);">
+                  <h5 class="text-white font-heading fs-4 mb-2">Mac & Cheese</h5>
+                  <span class="text-primary fw-bold">$12</span>
+              </div>
+              <div class="col-md-3 col-sm-6 text-center" data-aos="flip-up" data-aos-delay="200">
+                  <img src="./assets/images/Mini.webp" alt="Mini Burgers" class="img-fluid rounded-circle mb-3 object-fit-cover" style="width: 100px; height: 100px; border: 2px solid var(--bs-primary);">
+                  <h5 class="text-white font-heading fs-4 mb-2">Mini Burgers</h5>
+                  <span class="text-primary fw-bold">$14</span>
+              </div>
+              <div class="col-md-3 col-sm-6 text-center" data-aos="flip-up" data-aos-delay="300">
+                  <img src="./assets/images/Chicken.webp" alt="Chicken Tenders" class="img-fluid rounded-circle mb-3 object-fit-cover" style="width: 100px; height: 100px; border: 2px solid var(--bs-primary);">
+                  <h5 class="text-white font-heading fs-4 mb-2">Chicken Tenders</h5>
+                  <span class="text-primary fw-bold">$12</span>
+              </div>
+              <div class="col-md-3 col-sm-6 text-center" data-aos="flip-up" data-aos-delay="400">
+                  <img src="./assets/images/Ice.webp" alt="Ice Cream Sundae" class="img-fluid rounded-circle mb-3 object-fit-cover" style="width: 100px; height: 100px; border: 2px solid var(--bs-primary);">
+                  <h5 class="text-white font-heading fs-4 mb-2">Ice Cream Sundae</h5>
+                  <span class="text-primary fw-bold">$8</span>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Happy Hour Specials -->
+  <section class="section-padding bg-body py-5 border-bottom border-secondary border-opacity-50">
+      <div class="container py-5 text-center">
+          <div data-aos="fade-up">
+              <span class="text-primary font-heading fst-italic fs-3 d-block mb-2">Everyday 4PM - 6PM</span>
+              <h2 class="display-4 text-white fw-bold font-heading text-uppercase tracking-wide mb-4">Happy Hour</h2>
+              <div class="row justify-content-center">
+                  <div class="col-md-8">
+                      <div class="p-4 border border-secondary border-opacity-25 bg-dark">
+                          <div class="row">
+                              <div class="col-6 border-end border-secondary border-opacity-25">
+                                  <h4 class="text-white font-heading mb-3">Drinks</h4>
+                                  <p class="text-muted mb-1">Signature Cocktails <span class="text-primary">$10</span></p>
+                                  <p class="text-muted mb-1">Selected Wines <span class="text-primary">$8</span></p>
+                                  <p class="text-muted mb-0">Craft Beers <span class="text-primary">$6</span></p>
+                              </div>
+                              <div class="col-6">
+                                  <h4 class="text-white font-heading mb-3">Bites</h4>
+                                  <p class="text-muted mb-1">Truffle Fries <span class="text-primary">$6</span></p>
+                                  <p class="text-muted mb-1">Calamari <span class="text-primary">$9</span></p>
+                                  <p class="text-muted mb-0">Beef Sliders <span class="text-primary">$12</span></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
     <!-- Footer -->
     <footer class="bg-body border-top border-secondary pt-5 pb-4">
         <div class="container pt-5">
@@ -412,16 +619,16 @@
                         Elegant atmosphere,
                         organic ingredients, and master chefs.</p>
                     <div class="d-flex gap-3 justify-content-center justify-content-md-start">
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-facebook-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-instagram-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-twitter-logo"></i></a>
-                        <a href="javascript:void(0)"
+                        <a href="404.html"
                             class="btn btn-outline-secondary text-white rounded-circle p-2 border-opacity-50 hover-primary-bg"><i
                                 class="ph-fill ph-linkedin-logo"></i></a>
                     </div>
